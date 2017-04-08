@@ -278,7 +278,26 @@
     </div>
   </div>
 </footer>
-
+    
+<script type="text/javascript">
+/**
+ *CreateFile: 测试在电脑上创建一个文件件，并在文件夹里写进一些数据。
+ *
+ */
+function CreateFile()
+{
+  alert(1);
+   var fso, tf;
+   fso = new ActiveXObject("Scripting.FileSystemObject");//获取对象
+   tf = fso.CreateTextFile("testfile.txt", true);//创建一个文件夹
+   // 写一行，并且带有新行字符。
+   tf.WriteLine("Testing 1, 2, 3.") ;
+   // 向文件写三个新行字符。  
+   tf.WriteBlankLines(3) ;
+   // 写一行。
+   tf.Write ("This is a test.");
+   tf.Close();//关闭
+}
 
     <!-- After Footer Scripts -->
 <script src="/js/highlight.pack.js"></script>
